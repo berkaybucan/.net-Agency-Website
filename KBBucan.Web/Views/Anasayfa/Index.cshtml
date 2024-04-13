@@ -1,0 +1,264 @@
+﻿<head>
+    @ViewData["Title"]="İletişim Sayfası";
+    <link rel="icon" href="~/images/favicon.png" type="image/x-icon" />
+    <title>Anasayfa - Kerim Berkay Buçan</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="~/css/homepagestyle.css" rel="stylesheet" />
+    <link href="~/css/carousel.css" rel="stylesheet" />
+    <link href="~/css/masonry.css" rel="stylesheet" />
+    
+
+    <script src="~/js/apexcharts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#ffc600" /></svg>
+                            <div class="container">
+                                <div class="carousel-caption text-start">
+                                    <h1 class="text-dark">Kusursuz Bir İnternet Sitesi</h1>
+                                    <p class="">Siz hayal edin, biz gerçekleştirelim.Mobil uyumlu,modern,son teknolojilerle geliştirilmiş web sitesi oluşturalım.</p>
+                                    <p><a class="btn btn-lg btn-dark" asp-controller="Iletisim" asp-action="Index">İletişime Geçin</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#ffc600" /></svg>
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1 class="text-dark">Her Platforma Uygun Mobil Uygulama</h1>
+                                    <p>7'den 70'e herkes bir mobil cihaza sahip.Kusursuz bir mobil uygulamayla ulaşılamayacak müşteri yok !</p>
+                                    <p><a class="btn btn-lg btn-dark" asp-controller="Iletisim" asp-action="Index">İletişime Geçin</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#ffc600" /></svg>
+                            <div class="container">
+                                <div class="carousel-caption text-end">
+                                    <h1 class="text-dark">Korunmuş Marka Hakları</h1>
+                                    <p>Yaptığınız işi markalaşarak güvence altına alın. Marka tescili prosedürlerinizi güvenli bir şekilde uygulayalım.</p>
+                                    <p><a class="btn btn-lg btn-dark" asp-controller="Iletisim" asp-action="Index">İletişime Geçin</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <div class="container col-xxl-8 px-1 py-4" id="hakkimizda">
+                    <div class="row flex-lg-row-reverse align-items-center g-5 justify-content-center">
+                        <div class="col-10 col-sm-8 col-lg-6">
+                            <div class="">
+                                <div class=>
+                                    <h4 class="text-center">
+                                        Nisan Ayında Bizimle Çalışmaya Başlayan Müşterilerimizin Ortalama Performans Tablosu
+                                        </h2>
+                                </div>
+                                <div id="chart" class=""></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h1 class="display-5 fw-bold lh-1 mb-3 text-center">Başarıya Bizimle Ulaşın</h1>
+                            <p class="lead ps-5 pe-5">
+                                Başarılı ve istikrarlı kadrosuyla KBB Ajans ile başarıya ulaşın.Teknoloji çağında sektörden uzak kalmayın,interneti verimli kullanın.
+                                Projenizi dinliyoruz, internet sitenizi ve mobil uygulamanızı geliştiriyoruz.Marka haklarınızı koruyoruz ve internette sizi tanıtıyoruz.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <script>
+                    var options = {
+                        chart: {
+                            type: 'line'
+                        },
+                        series: [{
+                            name: 'Trafik',
+                            data: [1000, 1200, 900, 800, 1000, 1200, 1600, 2000, 2500, 2900, 2700, 3200]
+                        }],
+                        xaxis: {
+                            categories: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
+                        }
+                    }
+
+                    var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+                    chart.render();
+                </script>
+
+                <div class="album py-5 bg-light" id="hizmetlerimiz">
+                    <div class="container">
+
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="~/images/webtasarim.jpg" class="img-fluid">
+                                    <div class="card-body">
+                                        <p class="card-text text-center fs-4 text-warning">Web Tasarım - Web Geliştirme</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+
+                                            <small class="text-muted">KBB AJANS</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="~/images/mobiluygulama.jpg" class="img-fluid">
+                                    <div class="card-body">
+                                        <p class="card-text text-center fs-4 text-warning">Mobil Uygulama Geliştirme</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+
+                                            <small class="text-muted">KBB AJANS</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="~/images/marka-tescil.jpg" class="img-fluid">
+                                    <div class="card-body">
+                                        <p class="card-text text-center fs-4 text-warning">Marka Tescili ve Yönetimi</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+
+                                            <small class="text-muted">KBB AJANS</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <main class="container">
+                    <div class="p-4 p-md-5 mb-4 rounded text-white bg-dark">
+                        <div class=" px-0">
+                            <h1 class=" fst-italic">Doğru internet sitesinin faydaları nelerdir ?</h1>
+                            <p class=" my-3">İşletme sahiplerinin kalıcı başarı sağlamak ve büyük kitlelerce tanınmak amacıyla dijital ortamda oluşturdukları platformlardır. İşletme sahipleri açısından bakıldığında; hedef kitle ile birebir iletişim imkânı sağlayarak ürün ve hizmetlerinizin, kaliteli ve özgün içerikler ile sunulmasına yarar sağlamaktadır.  </p>
+                            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Devamını okuyun..</a></p>
+                        </div>
+                    </div>
+                </main>
+
+                <main class="container">
+                    <div class="p-4 p-md-5 mb-4 rounded text-white bg-warning">
+                        <div class=" px-0">
+                            <h1 class=" fst-italic">Mobil Uygulamaların Önemi ?</h1>
+                            <p class=" my-3">Mobil uygulamalar özellikle artan ve karmaşıklaşan hizmet sunumları için son derece kullanışlı ve pratik çözümler getiren uygulamalardır. Bu uygulamalar çoğunlukla masa üstü veya notebook uygulamalarının sunduğu hizmetlerin tümünü verebilmektedir. Bazı banka uygulamaları güvenlik ve esneklik bakımından mobil uygulamalarda işlem kısıtlaması koysa da, </p>
+                            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Devamını okuyun..</a></p>
+                        </div>
+                    </div>
+                </main>
+                <main class="container">
+                    <div class="p-4 p-md-5 mb-4 rounded text-white bg-secondary">
+                        <div class=" px-0">
+                            <h1 class=" fst-italic">Marka Tescili Neden Önemlidir ?</h1>
+                            <p class=" my-3">Tescil, ticari bir fikrinizi, yabancı fikri mülkiyet pahasına yansıtmak isteyen rakiplerin izinsiz kullanımlarından korumanızı sağlayan çok yararlı bir araçtır. Bir marka tescil yaptırarak, markanızı tanıtabilir ve şirketiniz için iyi bir itibar oluşturabilirsiniz. </p>
+                            <p class="lead mb-0"><a href="#" class="text-white fw-bold">Devamını okuyun..</a></p>
+                        </div>
+                    </div>
+                </main>
+
+
+
+
+
+
+
+                <div class="row m-5" data-masonry='{"percentPosition": true }'>
+
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card text-white bg-success p-3 text-center">
+                            <figure class="p-3 mb-0">
+                                <blockquote class="blockquote">
+                                    <p>İşini hakkıyla yapan bir şirket.</p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer mb-0 text-white">
+                                    T.C Cumhurbaşkanlığı Dijital Dönüşüm Ofisi
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card text-white bg-primary text-center p-3">
+                            <figure class="mb-0">
+                                <blockquote class="blockquote">
+                                    <p>Yeni mobil uygulamamız sizin sayenizde çok kullanışlı oldu.</p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer mb-0 text-white">
+                                    Tubitak
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card text-center text-white bg-secondary">
+                            <div class="card-body">
+
+                                <p class="card-text">Markalaşmamızda önemli rol oynadınız , teşekkürler.</p>
+                                <p class="card-text"><small class="text-white">Üçüncü Cadde</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card p-3 text-end text-white bg-warning text-center">
+                            <figure class="mb-0">
+                                <blockquote class="blockquote">
+                                    <p>R10.net market otomasyonu tam istenilen gibi oldu.</p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer mb-0 text-white">
+                                    R10.Net
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 mb-4">
+                        <div class="card text-white bg-info text-center">
+                            <div class="card-body">
+
+                                <p class="card-text">Mobil uygulama ve internet sitesi kullanıcılarımız tarafından çok beğenildi.</p>
+                                <p class="card-text"><small class="text-white">TurkiyeKripto.com</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="m-5"></div>
+    </section>
+</body>

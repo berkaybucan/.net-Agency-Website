@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KBBucan.Web", "KBBucan.Web\KBBucan.Web.csproj", "{821CB733-64E1-4F98-A0D1-04D2A2BBB538}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{821CB733-64E1-4F98-A0D1-04D2A2BBB538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{821CB733-64E1-4F98-A0D1-04D2A2BBB538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{821CB733-64E1-4F98-A0D1-04D2A2BBB538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{821CB733-64E1-4F98-A0D1-04D2A2BBB538}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {705D606C-32BA-45CA-9255-7B1A5AACB622}
+	EndGlobalSection
+EndGlobal
